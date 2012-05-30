@@ -1,0 +1,46 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 43616 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:325), pid=5032, tid=4924
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000006295000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=4924, stack(0x0000000006870000,0x0000000006970000)]
+
+Stack: [0x0000000006870000,0x0000000006970000]
+
+Current CompileTask:
+C2:    495    5             java.lang.String::equals (88 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000225b000 JavaThread "DestroyJavaVM" [_thread_blocked, id=3240, stack(0x0000000002470000,0x0000000002570000)]
+  0x000000000777d800 JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=1160, stack(0x0000000007bf0000,0x0000000007cf0000)]
+  0x0000000006393800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=6852, stack(0x0000000007560000,0x0000000007660000)]
+  0x0000000006392800 JavaThread "AWT-Shutdown" [_thread_blocked, id=1760, stack(0x00000000073f0000,0x00000000074f0000)]
+  0x0000000006392000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=6936, stack(0x0000000007280000,0x0000000007380000)]
+  0x000000000629d000 JavaThread "Service Thread" daemon [_thread_blocked, id=3264, stack(0x0000000006c70000,0x0000000006d70000)]
+  0x000000000629a000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=4512, stack(0x0000000006ed0000,0x0000000006fd0000)]
+=>0x0000000006295000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=4924, stack(0x0000000006870000,0x0000000006970000)]
+  
